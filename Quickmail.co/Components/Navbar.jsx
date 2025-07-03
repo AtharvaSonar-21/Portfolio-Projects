@@ -3,8 +3,8 @@ import { Menu, Bell, Settings, HelpCircle } from 'lucide-react';
 
 function Navbar() {
     return (  
-        <>
-            <div className="flex justify-between items-center p-4 shadow-md bg-white">
+      <div>
+        <div className="flex justify-between items-center p-4  m-0 shadow-md bg-blue">
       
       {/* Left Section: Logo + Menu */}
       <div className="flex items-center space-x-4">
@@ -12,8 +12,8 @@ function Navbar() {
         <span className="text-xl font-semibold text-gray-800"> Quickmail.co</span>
       </div>
 
-      {/* Center Section: Search Bar */}
-      <div className="flex-1 max-w-md mx-4">
+{      /* Center Section: Search Bar */
+}      <div className="flex-1 max-w-md mx-4">
         <i class="ri-search-line" className='flex bg-black '></i>
         <input
           type="text"
@@ -22,8 +22,8 @@ function Navbar() {
         />
       </div>
 
-      {/* Right Section: Icons + Avatar */}
-      <div className="flex items-center space-x-4">
+{      /* Right Section: Icons + Avatar */
+}      <div className="flex items-center space-x-4">
         <HelpCircle className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer" />
         <Settings className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer" />
         <Bell className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer" />
@@ -34,7 +34,7 @@ function Navbar() {
         />
       </div>
       </div>
-        </>
+        </div>
     );
 }
 
