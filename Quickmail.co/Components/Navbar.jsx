@@ -9,7 +9,7 @@ function Navbar() {
       {/* Left Section: Logo + Menu */}
       <div className="flex items-center space-x-4">
         <i className = "color-black" class="ri-menu-line"></i>
-        <span className="text-xl font-semibold text-gray-800"> Quickmail.co</span>
+       
       </div>
 
 {      /* Center Section: Search Bar */
