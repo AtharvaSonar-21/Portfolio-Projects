@@ -4,13 +4,20 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from '../Components/Navbar';
 import SideBar from '../Components/SideBar';
+import Dummymail from '../Components/Dummymail';
 
 function App() {
 
   return (
     <>
     <Navbar/>
-    <SideBar/>
+    <div className='flex'>
+      <SideBar/>
+      <Dummymail/>
+      
+    </div>
+    
+   
    
     
     </>

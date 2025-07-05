@@ -6,14 +6,12 @@ function Navbar() {
       <div>
         <div className="flex justify-between items-center p-4  m-0 shadow-md bg-blue">
       
-      {/* Left Section: Logo + Menu */}
       <div className="flex items-center space-x-4">
         <i className = "color-black" class="ri-menu-line"></i>
-       
+        <h1 className='text-xl font-semibold text-gray-800'> Quickmail.co</h1>
       </div>
 
-{      /* Center Section: Search Bar */
-}      <div className="flex-1 max-w-md mx-4">
+      <div className="flex-1 max-w-md mx-4">
         <i class="ri-search-line" className='flex bg-black '></i>
         <input
           type="text"
@@ -22,8 +20,7 @@ function Navbar() {
         />
       </div>
 
-{      /* Right Section: Icons + Avatar */
-}      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4">
         <HelpCircle className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer" />
         <Settings className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer" />
         <Bell className="w-5 h-5 text-gray-600 hover:text-blue-500 cursor-pointer" />
