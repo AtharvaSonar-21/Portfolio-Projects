@@ -1,2 +1,11 @@
-const Inbox = () => <h2 className="text-xl p-4">Inbox (Dummy Page)</h2>
+import Dummymail from "../../Components/Dummymail";
+
+const Inbox = () => {
+    return(
+        <>
+            <Dummymail/>
+        </>
+
+    )
+}
 export default Inbox;
