@@ -1,4 +1,4 @@
-import Dummymail from "../../Components/Dummymail";
+import Dummymail from "../Components/Dummymail.jsx";
 
 const Inbox = () => {
     return(

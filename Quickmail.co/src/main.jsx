@@ -3,10 +3,12 @@ import Drafts from './Pages/Drafts.jsx';
 import Sent from './Pages/Sent.jsx';
 import Promotional from './Pages/Promotional.jsx'
 import Updates from './Pages/Updates.jsx';
+import './index.css'
+import React from 'react'
 
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import  Layout from '../Components/Layout'
+import  Layout from './Components/Layout.jsx'
 import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from 'react-router-dom';
 
 
@@ -55,11 +57,11 @@ import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} fr
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path = '/' element = {<Layout/>}>
-      <Route path = ''element ={<Inbox/>}></Route>
-      <Route path = '/sent'element ={<Sent/>}></Route>
-      <Route path = '/drafts'element ={<Drafts/>}></Route>
-      <Route path = '/promotional'element ={<Promotional/>}></Route>
-      <Route path = '/updates'element ={<Updates/>}></Route>
+      <Route index element ={<Inbox/>}></Route>
+      <Route path = 'sent' element ={<Sent/>}></Route>
+      <Route path = 'drafts' element ={<Drafts/>}></Route>
+      <Route path = 'promotional' element ={<Promotional/>}></Route>
+      <Route path = 'updates' element ={<Updates/>}></Route>
 
     </Route >
   )

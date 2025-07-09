@@ -10,10 +10,10 @@ function SideBar() {
     return(
         <>
 
-            <div>
+            <div className='flex flex-col justify-between h-screen'>
                 <div className='bg-gray-100 h-screen w-2xs '>
                 <div className='text-center p-4'>
-                    <text className="text-xl font-semibold text-gray-800"> Quickmail.co</text>
+                    <p className="text-xl font-semibold text-gray-800"> Quickmail.co</p>
                 </div>
             
 
