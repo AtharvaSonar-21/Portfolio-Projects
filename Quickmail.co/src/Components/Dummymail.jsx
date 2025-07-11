@@ -3,11 +3,11 @@ import { Dice1, SearchSlash } from 'lucide-react';
 import React from 'react';
 import { useState } from 'react';
 
-function Dummymail(isOpen) {
+function Dummymail({isOpen, setmail}) {
     const baseClass = "transition-all duration-300 bg-white shadow-md h-full overflow-y-auto";
 
     const [selectedEmail,setselectedEmail] = useState(null)
-    const [mail,setmail] = useState(null)
+    const [readMail,setreadMail] = useState(new Set());
     const dummyMails = [
         { id: 1, sender: "alice@example.com", subject: "Welcome!", preview: "Thanks for joining us...", time: "10:30 AM" },
         { id: 2, sender: "bob@project.com", subject: "Project update", preview: "Here's the latest progress...", time: "9:20 AM" },
@@ -24,14 +24,21 @@ function Dummymail(isOpen) {
                 {dummyMails.map((dummyMails)=> (
                     <div
                     key={dummyMails.id}
-                    onClick={()=> setselectedEmail(dummyMails)}
-                    className="bg-white p-4 m-2 rounded-2xl shadow-sm hover:shadow-md transition duration-200 flex justify-between items-start cursor-pointer"
+                    onClick={()=> {
+                        setselectedEmail(dummyMails)
+                        setreadMail(prev => new Set(prev).add(dummyMails.id))
+                    }}
+                    className="bg-white p-4 m-2 rounded-2xl shadow-lg 
+                    hover:shadow-md transition duration-200 flex 
+                    justify-between items-start
+                    cursor-pointer"
                     >
                         <div>
                             <h3 className='text-sm text-gray-600'>{dummyMails.sender}</h3>
                             <h2 className='text-md font-semibold'>{dummyMails.subject}</h2>
                             <p className='text-sm text-gray-500'>{dummyMails.preview}</p>
                         </div>
+                        <div className='flex bg-gray-200 p-1 rounded-md'>{readMail.has(dummyMails.id) ? 'read' : 'unread'}</div>
                         <span className='text-xs text-gray-400'>{dummyMails.time}</span>
                     </div>
                 ))}
@@ -43,8 +50,11 @@ function Dummymail(isOpen) {
       <div className="absolute top-0 right-0 
       w-full h-full bg-white p-6 shadow-lg 
       rounded-l-2xl overflow-y-autotransition-transform duration-300">
-                <button onClick={() => setselectedEmail(null)}
-                    className='flex text-white bg-blue-500 p-2 m-5 rounded-2xl'>← Back</button>
+                <button onClick={() => setselectedEmail(null) && `${isOpen}` && setmail(null)}
+
+                    className='flex text-white bg-blue-500 p-2 m-5 rounded-2xl'>
+                    ← Back    
+                </button>
                 <div className='p-10 m-5'>
                 <h2 className="text-2xl font-bold">{selectedEmail.subject}</h2>
                 <p className="text-gray-600 mb-4">From: {selectedEmail.sender}</p>
