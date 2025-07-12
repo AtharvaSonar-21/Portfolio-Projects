@@ -38,7 +38,7 @@ function Dummymail({isOpen, setmail}) {
                             <h2 className='text-md font-semibold'>{dummyMails.subject}</h2>
                             <p className='text-sm text-gray-500'>{dummyMails.preview}</p>
                         </div>
-                        <div className='flex bg-gray-200 p-1 rounded-md'>{readMail.has(dummyMails.id) ? 'read' : 'unread'}</div>
+                        <div className='flex text-gray-400 p-1 rounded-md'>{readMail.has(dummyMails.id) ? 'read' : 'unread'}</div>
                         <span className='text-xs text-gray-400'>{dummyMails.time}</span>
                     </div>
                 ))}
