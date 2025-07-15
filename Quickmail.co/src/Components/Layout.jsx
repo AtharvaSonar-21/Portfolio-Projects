@@ -8,13 +8,27 @@ import Compose from "./Compose";
 function Layout() {
   const [isOpen, setIsOpen] = useState(false);
   const [isComposeOpen, setIsComposeOpen] = useState(false);
+  const [sentEmails, setSentEmails] = useState([]);
+  const [draftEmails, setDraftEmails] = useState([]); // If applicable
+
   const handleComposeSubmit = (data) => {
-  console.log('Send email:', data);
-              <Compose
-            isOpen={isComposeOpen}
-            onClose={() => setIsComposeOpen(false)}
-            onSubmit={handleComposeSubmit}
-            />
+        const emails = {
+        status: "sent"|| "draft",
+      ...data,
+      id: Date.now(),
+      sentAt: new Date().toISOString()
+      };
+    if (emails.status === "sent") {
+    setSentEmails(prev => [emails, ...prev]);
+    } else if (emails.status === "draft") {
+      setDraftEmails(prev => [emails, ...prev]);
+    }
+    setIsComposeOpen(false); 
+               //   <Compose
+            // isOpen={isComposeOpen}
+            // onClose={() => setIsComposeOpen(false)}
+            // onSubmit={handleComposeSubmit}
+            // />
 
   // TODO: add logic to send email or store it
   };
@@ -25,7 +39,11 @@ function Layout() {
       <Navbar toggleSidebar={() => setIsOpen(!isOpen)} />
 
       <div className="flex flex-1">
-        <SideBar isOpen={isOpen} />
+        <SideBar 
+        isOpen={isOpen}
+        sentcount={sentEmails.length}
+        draftcount={draftEmails.length}
+         />
         <main className="flex-1 p-4 overflow-auto">
           <Outlet />
         </main>

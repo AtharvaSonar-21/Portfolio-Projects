@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink ,Link} from 'react-router-dom';
-function SideBar({isOpen}) {
+function SideBar({isOpen,sentcount = 0 , draftcount = 0}) {
     const baseClass = "transition-all duration-300 bg-white shadow-md h-full overflow-y-auto";
     const activeClass = "bg-gray-200";
     let inbox = Math.floor(Math.random()*10+1);

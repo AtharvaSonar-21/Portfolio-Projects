@@ -8,21 +8,68 @@ export default function Compose({isOpen ,onClose, onSubmit }){
     const baseClass = "transition-all duration-300 bg-white shadow-md h-full overflow-y-auto";
 
     const handleSubmit = (e) =>{
-        e.preventDefault();
-        onSubmit({to,subject,body});
+      e.preventDefault();
+      const email = {
+          to,
+          subject,
+          body,
+          status: "sent", // ✅ required
+          sentAt: new Date().toISOString(),
+          id: Date.now(),
+        };
+        
+        onSubmit(email);
         setTo('');
         setSubject('');
         setBody('');
         onClose();
-
+        
     };
+        const handleCancel = () => {
+      // Only save as draft if any field has content
+      if (to || subject || body) {
+        const draft = {
+          to,
+          subject,
+          body,
+          status: "draft",
+          savedAt: new Date().toISOString(),
+          id: Date.now(),
+        };
+        onSubmit(draft);
+      }
+      setTo('');
+      setSubject('');
+      setBody('');
+      onClose();
+    };
+
+    const handleJustClose = () => {
+    // Simply close the modal without saving anything
+    setTo('');
+    setSubject('');
+    setBody('');
+    onClose();
+  };
+
 
     if (!isOpen) return null;
 
       return (
         <div className={`${baseClass} ${isOpen ? "w-64" : "w-0"} overflow-hidden rounded-2xl z-50 ${isOpen ? "block" : "hidden"}`}>
-      <div className="bg-white p-6 rounded-md shadow-lg max-w-md">
-        <h2 className="text-lg text-center font-semibold mb-4">Compose Mail</h2>
+      <div className="bg-white p-6 rounded-md shadow-lg max-w-md " >
+        <h2 className="text-lg text-center font-semibold mb-4">Compose Mail
+        </h2>
+        <button
+          onClick={handleJustClose}
+          className="absolute top-4 right-4 text-gray-500 hover:text-black"
+          title="Close"
+        >
+        <i class="ri-close-large-line"></i>
+        </button>
+
+
+
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
             type="email"
@@ -50,7 +97,7 @@ export default function Compose({isOpen ,onClose, onSubmit }){
           <div className="flex justify-end gap-2">
             <button
               type="button"
-              onClick={onClose}
+              onClick={handleCancel}
               className="px-4 py-2 bg-gray-200 rounded"
             >
               Cancel

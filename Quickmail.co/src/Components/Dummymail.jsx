@@ -3,12 +3,12 @@ import { Dice1, SearchSlash } from 'lucide-react';
 import React from 'react';
 import { useState } from 'react';
 
-function Dummymail({isOpen, setmail}) {
+function Dummymail({isOpen, setmail,mail=[]}) {
     const baseClass = "transition-all duration-300 bg-white shadow-md h-full overflow-y-auto";
 
     const [selectedEmail,setselectedEmail] = useState(null)
     const [readMail,setreadMail] = useState(new Set());
-    const dummyMails = [
+    const dummyMails = mail.length ? mail : [
         { id: 1, sender: "alice@example.com", subject: "Welcome!", preview: "Thanks for joining us...", time: "10:30 AM" },
         { id: 2, sender: "bob@project.com", subject: "Project update", preview: "Here's the latest progress...", time: "9:20 AM" },
         { id: 3, sender: "support@service.com", subject: "Your ticket is resolved", preview: "We're glad to help you...", time: "Yesterday" },
