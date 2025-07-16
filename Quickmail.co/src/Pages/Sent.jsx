@@ -5,7 +5,7 @@ const Sent = () =>{
 return (
 <div>
     <h2 className="text-xl p-4">📤 Sent Mails (Dummy Page)</h2>
-    <div>
+    <div >
     {sentEmails.length === 0 ? (
         <p>No sent emails yet.</p>
       ) : (
