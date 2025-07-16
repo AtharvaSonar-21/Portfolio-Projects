@@ -13,7 +13,7 @@ export default function Compose({isOpen ,onClose, onSubmit }){
           to,
           subject,
           body,
-          status: "sent", // ✅ required
+          status: "sent",
           sentAt: new Date().toISOString(),
           id: Date.now(),
         };

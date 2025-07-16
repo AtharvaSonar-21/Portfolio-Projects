@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink ,Link} from 'react-router-dom';
-function SideBar({isOpen,sentcount = 0 , draftcount = 0}) {
+function SideBar({isOpen,sentcount = 0 , draftcount = 0}
+    ,inboxcount = 0,
+  updatescount = 0,
+  promotionalcount = 0
+) {
     const baseClass = "transition-all duration-300 bg-white shadow-md h-full overflow-y-auto";
     const activeClass = "bg-gray-200";
-    let inbox = Math.floor(Math.random()*10+1);
-    let updates =  Math.floor(Math.random()*100+1);
-    let promotional =  Math.floor(Math.random()*100+1);
-    let sent = 0
-    let draft = 0
+   
     return(
         <>
         <div className={`${baseClass} ${isOpen ? "w-64" : "w-0"} overflow-hidden`}>
@@ -39,7 +39,7 @@ function SideBar({isOpen,sentcount = 0 , draftcount = 0}) {
 
                 }}>
                     
-                    new{inbox} 
+                    new{inboxcount} 
                     
                     </div>
                 </NavLink>
@@ -67,7 +67,7 @@ function SideBar({isOpen,sentcount = 0 , draftcount = 0}) {
                 <div className=' bg-yellow-300 rounded-2xl px-2 text-white' style={{display: 'inline',
                     margin: '100px'
 
-                }}>new{updates} </div>
+                }}>new{updatescount} </div>
                 </NavLink>
             </button>
 
@@ -89,7 +89,7 @@ function SideBar({isOpen,sentcount = 0 , draftcount = 0}) {
                 <div className='bg-blue-300 rounded-2xl px-2 text-white'  style={{display: 'inline',
                     margin: '75px'
 
-                }}>new{promotional} </div>
+                }}>new{promotionalcount} </div>
                 </NavLink>
             </button>
             
@@ -111,7 +111,7 @@ function SideBar({isOpen,sentcount = 0 , draftcount = 0}) {
                 <div className='flex bg-red-600 rounded-2xl px-2 text-white' style={{display: 'inline',
                     margin: '130px'
 
-                }}>new{sent} </div>
+                }}>new{sentcount} </div>
                 </NavLink>
             </button>
             <button className='bg-gray-300  p-4 m-2 rounded-4xl w-3xs text-left'>
@@ -133,7 +133,7 @@ function SideBar({isOpen,sentcount = 0 , draftcount = 0}) {
                 <div className='flex bg-red-600 rounded-2xl px-2 text-white' style={{display: 'inline',
                     margin: '120px'
 
-                }}>new{draft} </div>
+                }}>new{draftcount} </div>
                 </NavLink>
             </button>
            
