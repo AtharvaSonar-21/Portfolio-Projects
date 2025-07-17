@@ -6,7 +6,7 @@ import Layout from './Layout';
 
 function Dummymail({isOpen, setmail,mail=[]}) {
     const baseClass = "transition-all duration-300 bg-white shadow-md h-full overflow-y-auto";
-
+        
     const [selectedEmail,setselectedEmail] = useState(null)
     const [readMail,setreadMail] = useState(new Set());
     const dummyMails = mail.length ? mail : [
@@ -51,7 +51,9 @@ function Dummymail({isOpen, setmail,mail=[]}) {
       <div className="absolute top-0 right-0 
       w-full h-full bg-white p-6 shadow-lg 
       rounded-l-2xl overflow-y-autotransition-transform duration-300">
-                <button onClick={() => setselectedEmail(null) && `${isOpen}` && setmail(null)}
+                <button onClick={() => {
+                setselectedEmail(null) 
+                `${isOpen}` && setmail(null)}}
 
                     className='flex text-white bg-blue-500 p-2 m-5 rounded-2xl'>
                     ← Back    

@@ -1,13 +1,16 @@
 import React from 'react';
-import { NavLink ,Link} from 'react-router-dom';
+import { NavLink ,Link, useOutlet, useOutletContext} from 'react-router-dom';
+
 function SideBar({isOpen,sentcount = 0 , draftcount = 0}
-    ,inboxcount = 0,
+    ,
   updatescount = 0,
-  promotionalcount = 0
+  promotionalcount = 0,
+  inboxEmails =  []
 ) {
     const baseClass = "transition-all duration-300 bg-white shadow-md h-full overflow-y-auto";
     const activeClass = "bg-gray-200";
-   
+    const unreadCount = inboxEmails?.filter(mail => mail.isRead === false).length ?? 0;
+
     return(
         <>
         <div className={`${baseClass} ${isOpen ? "w-64" : "w-0"} overflow-hidden`}>
@@ -39,7 +42,7 @@ function SideBar({isOpen,sentcount = 0 , draftcount = 0}
 
                 }}>
                     
-                    new{inboxcount} 
+                    new{inboxEmails} 
                     
                     </div>
                 </NavLink>

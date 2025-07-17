@@ -13,6 +13,14 @@ function Layout() {
   const [inboxEmails, setInboxEmails] = useState([]);
   const [updatesEmails, setUpdatesEmails] = useState([]);
   const [promotionalEmails, setPromotionalEmails] = useState([]);
+  const [emails, setEmails] = useState({
+  sent: [],
+  draft: [],
+  inbox: [],
+  updates: [],
+  promotional: [],
+});
+
 
   useEffect(() => {
   setInboxEmails([
@@ -81,12 +89,22 @@ function Layout() {
         isOpen={isOpen}
         sentcount={sentEmails.length}
         draftcount={draftEmails.length}
-        inboxcount={inboxEmails.length}
+        inboxEmails={inboxEmails.length} 
         updatescount={updatesEmails.length}
         promotionalcount={promotionalEmails.length}
          />
         <main className="flex-1 p-4 overflow-auto">
-          <Outlet context={{ sentEmails, draftEmails }} />
+          <Outlet context={{ 
+            sentEmails,
+            draftEmails,
+            inboxEmails,
+            updatesEmails,
+            promotionalEmails,
+            setInboxEmails,
+            setUpdatesEmails,
+            setPromotionalEmails
+            
+             }} />
         </main>
         <button className=" bg-red-600 text-white border-0  bottom-20 right-20 rounded-2xl p-4"
          style={{position:"fixed"}}
