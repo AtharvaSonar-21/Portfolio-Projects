@@ -2,7 +2,7 @@ import { useOutlet, useOutletContext } from "react-router-dom";
 import Dummymail from "../Components/Dummymail.jsx";
 import { useState,useEffect } from "react";
 
-const Inbox = () => {
+const Inbox = ({isOpen}) => {
     const {inboxEmails,setInboxEmails} = useOutletContext();
     const [readMail, setReadMail] = useState(new Set())
     const markAsRead = (id) => {
@@ -32,10 +32,8 @@ const Inbox = () => {
   );
 };
     return(
-        <>
-        <div>
+        <div className="rounded-xl">
             {inboxEmails && inboxEmails.length > 0 && (
-
             <Dummymail
             mail={inboxEmails}
             readMail = {readMail}
@@ -43,8 +41,6 @@ const Inbox = () => {
             setmail={setInboxEmails}/>
             )}
         </div>
-
-        </>
 
     )
 }
