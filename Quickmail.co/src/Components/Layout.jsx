@@ -77,7 +77,7 @@ function Layout() {
   };
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col"style={{backgroundImage: `url(https://images.pexels.com/photos/2156/sky-earth-space-working.jpg)`, display : 'flex'}}>
       <Navbar toggleSidebar={() => setIsOpen(!isOpen)} />
 
       <div className="flex flex-1">

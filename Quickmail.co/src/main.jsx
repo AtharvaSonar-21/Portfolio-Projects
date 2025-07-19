@@ -53,7 +53,7 @@ import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} fr
 // )
 
 // Second Method 
-
+<img src="https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg" alt="" />
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path = '/' element = {<Layout/>}>

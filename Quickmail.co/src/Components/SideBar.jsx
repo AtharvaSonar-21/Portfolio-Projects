@@ -11,7 +11,7 @@ function SideBar({
   unreadCount
 }) {
   const baseClass =
-    'transition-all duration-300 bg-white shadow-md h-full overflow-y-auto';
+    'transition-all duration-300  shadow-md h-full overflow-y-auto';
 
   const navLinkClass = ({ isActive }) =>
     `block py-2 px-3 duration-200 rounded-lg w-full text-left ${
@@ -19,10 +19,10 @@ function SideBar({
     } hover:bg-gray-50`;
 
   return (
-    <div className={`${baseClass} ${isOpen ? 'w-64' : 'w-0'} overflow-hidden`}>
-      <div className="flex flex-col justify-top h-screen bg-gray-100">
+    <div className={`${baseClass} ${isOpen ? 'w-64' : 'w-0'} overflow-hidden rounded-xl `}>
+      <div className="flex flex-col justify-top h-full bg-black/50">
         <div className="text-center p-4">
-          <p className="text-xl font-semibold text-gray-800">Quickmail.co</p>
+          <p className="text-xl font-semibold text-white">Quickmail.co</p>
         </div>
 
         <div className="flex flex-col gap-2 p-2">

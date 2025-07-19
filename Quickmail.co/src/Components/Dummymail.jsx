@@ -19,7 +19,7 @@ function Dummymail({isOpen, setmail,mail=[]}) {
         { id: 7, sender: "atharvasonar@mail.com", subject: "Learn Modern Web Development From Back End to Front", preview : "Here are this week's five freeCodeCamp resources that are worth your time:" , time: '4 days ago' }
     ];
     return (
-        <div className="h-screen w-full bg-gray-200 p-4 ">
+        <div className=" flex h-screen w-full p-4 ">
             {/* <h2>Dummy Mails </h2> */}
             <div className=' w-full  rounded-2xl mb-2'>
                 {dummyMails.map((dummyMails)=> (

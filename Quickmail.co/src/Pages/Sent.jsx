@@ -4,14 +4,14 @@ const Sent = () =>{
     const { sentEmails } = useOutletContext();
 return (
 <div>
-    <h2 className="text-xl p-4">📤 Sent Mails (Dummy Page)</h2>
+    <h2 className="text-xl text-shadow-gray-600 p-4">📤 Sent Mails (Dummy Page)</h2>
     <div >
     {sentEmails.length === 0 ? (
         <p>No sent emails yet.</p>
       ) : (
         <ul className="space-y-4">
           {sentEmails.map((email) => (
-            <li key={email.id} className="border p-4 rounded shadow">
+            <li key={email.id} className="border p-4 rounded shadow bg-white">
               <p><strong>To:</strong> {email.to}</p>
               <p><strong>Subject:</strong> {email.subject}</p>
               <p><strong>Body:</strong> {email.body}</p>

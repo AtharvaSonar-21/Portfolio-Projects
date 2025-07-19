@@ -4,7 +4,7 @@ const Drafts = () => {
   const context = useOutletContext() || {};
   const { draftEmails = [] } = context;
   return(
-    <div className="m-5">
+    <div className="m-5 text-gray-600">
       <h2 className="text-2xl mb-2">📝 Drafts</h2>
 
       {draftEmails.length === 0 ? (
@@ -12,7 +12,7 @@ const Drafts = () => {
       ) : (
         <ul className="space-y-4 px-4">
           {draftEmails.map((email) => (
-            <li key={email.id} className="border p-4 rounded shadow">
+            <li key={email.id} className="border p-4 rounded shadow bg-white">
               <p><strong>To:</strong> {email.to}</p>
               <p><strong>Subject:</strong> {email.subject}</p>
               <p><strong>Body:</strong> {email.body}</p>

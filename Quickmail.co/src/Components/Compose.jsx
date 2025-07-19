@@ -56,8 +56,8 @@ export default function Compose({isOpen ,onClose, onSubmit }){
     if (!isOpen) return null;
 
       return (
-        <div className={`${baseClass} ${isOpen ? "w-64" : "w-0"} overflow-hidden rounded-2xl z-50 ${isOpen ? "block" : "hidden"}`}>
-      <div className="bg-white p-6 rounded-md shadow-lg max-w-md " >
+        <div className={` ${isOpen ? "w-64" : "w-0"} overflow-hidden rounded-2xl ${isOpen ? "block" : "hidden"}`}>
+      <div className="bg-black/50 p-6 rounded-md shadow-lg max-w-md text-white" >
         <h2 className="text-lg text-center font-semibold mb-4">Compose Mail
         </h2>
         <button
@@ -98,7 +98,7 @@ export default function Compose({isOpen ,onClose, onSubmit }){
             <button
               type="button"
               onClick={handleCancel}
-              className="px-4 py-2 bg-gray-200 rounded"
+              className="px-4 py-2 bg-white/20 rounded"
             >
               Cancel
             </button>

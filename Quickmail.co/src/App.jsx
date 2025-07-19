@@ -8,6 +8,8 @@ function App() {
 
   return(
     <>
+      <div className=" flex h-screen w-full p-4 " style={{backgroundImage: `url(https://images.pexels.com/photos/2156/sky-earth-space-working.jpg)`, display : 'flex'}}>
+      </div>
     </>
   )
 }
