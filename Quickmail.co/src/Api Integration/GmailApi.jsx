@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import {gapi} from 'gapi-script'
 
 
-const API_KEY = "AIzaSyBZNi_TKu2GdUDussB5BXU6HvGbuiEkvok"
-
-const Client_Id = "225456017758-0sksq740ba8of8cv4funrvs2f9e291le.apps.googleusercontent.com"
-
 function GmailApi() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [messages, setMessages] = useState([]);
