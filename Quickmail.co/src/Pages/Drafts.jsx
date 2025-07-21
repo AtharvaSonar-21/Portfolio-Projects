@@ -1,4 +1,3 @@
-import Dummymail from "../Components/Dummymail";
 import { useOutletContext } from "react-router-dom";
 const Drafts = () => {
   const context = useOutletContext() || {};

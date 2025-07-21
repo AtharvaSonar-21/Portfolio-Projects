@@ -4,6 +4,7 @@ import SideBar from "./SideBar";
 import { Outlet } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import Compose from "./Compose";
+import GmailApi from "../Api Integration/GmailApi";
 
 function Layout() {
   const [isOpen, setIsOpen] = useState(false);
@@ -79,7 +80,7 @@ function Layout() {
   return (
     <div className="h-screen flex flex-col"style={{backgroundImage: `url(https://images.pexels.com/photos/2156/sky-earth-space-working.jpg)`, display : 'flex'}}>
       <Navbar toggleSidebar={() => setIsOpen(!isOpen)} />
-
+        <GmailApi/>
       <div className="flex flex-1">
         <SideBar 
           isOpen={isOpen}

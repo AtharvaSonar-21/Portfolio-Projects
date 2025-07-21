@@ -1,4 +1,3 @@
-import { DraftingCompass } from 'lucide-react';
 import React,{useState} from 'react';
 
 export default function Compose({isOpen ,onClose, onSubmit }){

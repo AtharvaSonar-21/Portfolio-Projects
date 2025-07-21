@@ -1,15 +1,16 @@
-import  Inbox  from './Pages/Inbox.jsx';
-import Drafts from './Pages/Drafts.jsx';
-import Sent from './Pages/Sent.jsx';
-import Promotional from './Pages/Promotional.jsx'
-import Updates from './Pages/Updates.jsx';
-import './index.css'
+import  Inbox  from '../src/Pages/Inbox.jsx';
+import Drafts from '../src/Pages/Drafts.jsx';
+import Sent from '../src/Pages/Sent.jsx';
+import Promotional from '../src/Pages/Promotional.jsx'
+import Updates from '../src/Pages/Updates.jsx';
 import React from 'react'
-
+import './index.css'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import  Layout from './Components/Layout.jsx'
-import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from 'react-router-dom';
+import {createBrowserRouter, createRoutesFromElements, Route, Router, RouterProvider} from 'react-router-dom';
+import App from './App.jsx';
+import  Home  from './Home Page/Home.jsx'
 
 
 // this is first method to use the react router
@@ -53,17 +54,18 @@ import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} fr
 // )
 
 // Second Method 
-<img src="https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg" alt="" />
+
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path = '/' element = {<Layout/>}>
+    <Route path='/' element = {<Home/>}>
+    <Route path = '/layout' element = {<Layout/>}>
       <Route index element ={<Inbox/>}></Route>
       <Route path = 'sent' element ={<Sent/>}></Route>
       <Route path = 'drafts' element ={<Drafts/>}></Route>
       <Route path = 'promotional' element ={<Promotional/>}></Route>
       <Route path = 'updates' element ={<Updates/>}></Route>
-
     </Route >
+    </Route>
   )
 )
 

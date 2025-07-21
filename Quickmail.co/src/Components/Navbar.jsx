@@ -3,7 +3,7 @@ import { Bell, Settings, HelpCircle } from 'lucide-react';
 
 function Navbar({toggleSidebar}) {
   return (
-      <div className="flex justify-between items-center p-4 shadow-md bg-black/50 ">
+      <div className="flex justify-between items-center p-4 shadow-md bg-white/50 ">
         <div className="flex items-center space-x-4">
           <i className="ri-menu-line text-white text-xl cursor-pointer" onClick={toggleSidebar}></i>
           <h1 className="text-xl font-semibold text-white">Quickmail.co</h1>

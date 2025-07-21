@@ -1,5 +1,4 @@
 
-import { Dice1, SearchSlash } from 'lucide-react';
 import React from 'react';
 import { useState } from 'react';
 import Layout from './Layout';
