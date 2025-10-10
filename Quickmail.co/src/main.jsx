@@ -8,7 +8,7 @@ import './index.css'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import  Layout from './Components/Layout.jsx'
-import {createBrowserRouter, createRoutesFromElements, Route, Router, RouterProvider} from 'react-router-dom';
+import {createBrowserRouter, createRoutesFromElements, Route, Router, RouterProvider, Routes} from 'react-router-dom';
 import App from './App.jsx';
 import  Home  from './Home Page/Home.jsx'
 
@@ -57,15 +57,14 @@ import  Home  from './Home Page/Home.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element = {<Home/>}>
-    <Route path = '/layout' element = {<Layout/>}>
+      <Route path = '/' element = {<Layout/>}>
       <Route index element ={<Inbox/>}></Route>
       <Route path = 'sent' element ={<Sent/>}></Route>
       <Route path = 'drafts' element ={<Drafts/>}></Route>
       <Route path = 'promotional' element ={<Promotional/>}></Route>
       <Route path = 'updates' element ={<Updates/>}></Route>
-    </Route >
-    </Route>
+      </Route >
+    
   )
 )
 

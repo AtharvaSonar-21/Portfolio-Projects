@@ -1,8 +1,7 @@
 import React from "react";
 import Login from "../Components/Login";
 import SignUp from "../Components/SignUp";
-import { Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 function Home(){
@@ -19,11 +18,11 @@ function Home(){
                 <div className="absolute top-0 w-full px-10 py-6 flex items-center justify-between z-10 bg-white/55">
                   <h2 className="text-white text-2xl font-bold">QuickMail.co</h2>
                     <div className="space-x-6">
-                      <Link to="/" className="text-white font-medium hover:underline">Home</Link>
-                      <Link to="/signup" className="text-white font-medium hover:underline">Sign Up</Link>
-                      <Link to="/login" className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-medium transition">
-                          Login
-                      </Link>
+                      <NavLink to="/" className="text-white font-medium hover:underline">Home</NavLink>
+                      <NavLink to="/signup" className="text-white font-medium hover:underline">Sign Up</NavLink>
+                      <NavLink to="/login" className="text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg font-medium transition">
+                        Login
+                      </NavLink>
                     </div>
                 </div>
 
@@ -36,12 +35,12 @@ function Home(){
                         A smarter, faster, and more secure way to email. Clean interface. Zero clutter. Total control.
                         </p>
                          <div class="mt-8">
-                            <a href="/signup" class="inline-block px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-lg font-medium transition">
+                            <NavLink to ="/signup" element = {<SignUp/>} className="inline-block px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-lg font-medium transition">
                                Get Started – It's Free
-                            </a>
-                            <a href="/learn-more" class="ml-4 text-blue-200 hover:underline">
+                            </NavLink>
+                            <NavLink to ="/" element = {<Login/>} className="ml-4 text-blue-200 hover:underline">
                                Learn More
-                            </a>
+                            </NavLink>
                           </div>
                   </div>
                 </section>
