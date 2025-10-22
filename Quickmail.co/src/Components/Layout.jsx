@@ -4,7 +4,7 @@ import SideBar from "./SideBar";
 import { Outlet } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import Compose from "./Compose";
-import GmailApi from "../Api Integration/GmailApi";
+// import GmailApi from "../Api Integration/GmailApi";
 
 function Layout() {
   const [isOpen, setIsOpen] = useState(false);
