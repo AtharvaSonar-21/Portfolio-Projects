@@ -38,7 +38,7 @@ function Home(){
                             <NavLink to ="/signup" element = {<SignUp/>} className="inline-block px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-lg text-lg font-medium transition">
                                Get Started – It's Free
                             </NavLink>
-                            <NavLink to ="/" element = {<Login/>} className="ml-4 text-blue-200 hover:underline">
+                            <NavLink to ="/login" element = {<Login/>} className="ml-4 text-blue-200 hover:underline">
                                Learn More
                             </NavLink>
                           </div>
