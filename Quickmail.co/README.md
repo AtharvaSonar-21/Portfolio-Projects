@@ -85,7 +85,6 @@ It simulates real-world email app behavior — inbox, drafts, sent items, and ca
    http://localhost:3000
    ```
 
----
 ```
 ```
 ## 💡 Usage
