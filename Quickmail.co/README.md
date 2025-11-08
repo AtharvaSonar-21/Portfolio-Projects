@@ -1,7 +1,3 @@
-
----
-
-````markdown
 # 📬 QuickMail.co
 
 **QuickMail.co** is a sleek and modern frontend email client built using React.  
@@ -14,19 +10,19 @@ It provides an intuitive, responsive, and minimal interface for composing, viewi
 ## 🖼️ Preview
 
 ### Inbox Page  
-![Inbox Page](./Screenshot%202025-11-08%20101541.png)
+![Inbox Page](./public/Screenshot%202025-11-08%20101541.png)
 
 ### Updates Section  
-![Updates Page](./Screenshot%202025-11-08%20101618.png)
+![Updates Page](./public/Screenshot%202025-11-08%20101618.png)
 
 ### Promotional Mails  
-![Promotional Page](./Screenshot%202025-11-08%20101633.png)
+![Promotional Page](./public/Screenshot%202025-11-08%20101633.png)
 
 ### Sent Mails  
-![Sent Page](./Screenshot%202025-11-08%20101752.png)
+![Sent Page](./public/Screenshot%202025-11-08%20101752.png)
 
 ### Drafts  
-![Drafts Page](./Screenshot%202025-11-08%20101842.png)
+![Drafts Page](./public/Screenshot%202025-11-08%20101842.png)
 
 ---
 
@@ -90,7 +86,7 @@ It simulates real-world email app behavior — inbox, drafts, sent items, and ca
    ```
 
 ---
-
+````
 ## 💡 Usage
 
 * Use the sidebar to navigate between Inbox, Updates, Promotions, Sent, and Drafts.
@@ -132,4 +128,3 @@ Open an issue or submit a pull request — contributions are always welcome!
 
 ```
 
-```
