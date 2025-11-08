@@ -126,5 +126,3 @@ This project is open-source and available under the [MIT License](LICENSE).
 Have suggestions or want to collaborate?
 Open an issue or submit a pull request — contributions are always welcome!
 
-```
-
