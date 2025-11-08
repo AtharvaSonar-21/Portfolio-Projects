@@ -65,8 +65,8 @@ It simulates real-world email app behavior — inbox, drafts, sent items, and ca
    ```bash
    git clone https://github.com/AtharvaSonar-21/Portfolio-Projects.git
    cd Portfolio-Projects/Quickmail.co
-````
-
+```
+```
 2. **Install dependencies**
 
    ```bash
@@ -86,7 +86,8 @@ It simulates real-world email app behavior — inbox, drafts, sent items, and ca
    ```
 
 ---
-````
+```
+```
 ## 💡 Usage
 
 * Use the sidebar to navigate between Inbox, Updates, Promotions, Sent, and Drafts.
