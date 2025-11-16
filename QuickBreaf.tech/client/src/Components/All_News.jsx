@@ -33,6 +33,10 @@ function All_News() {
 
     fetchData();
   }, [page, pageSize]);
+  
+  fetch("/api/hello")
+  .then(r => r.json())
+  .then(console.log);
 
   return (
     <>
